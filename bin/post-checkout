@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "${0##*/}: recompiling iff file(s)"
+# If some iff files are not present in this checkout, then uncommentting the following line might help.
+# rm *.d[ix]r *.c[sx]t 
+bin/xml2iff.pl -O *.xml

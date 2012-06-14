@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo ${0##*/}
+IFS='
+'
+STATUS=0
+for FILE in $(ls *.d[ix]r *.c[sx]t 2>/dev/null); do
+	if [ "$FILE" -nt "$FILE.xml" ]; then
+		STATUS=1
+		echo "updating: $FILE.xml"
+		bin/iff2xml.pl -O "$FILE"
+	fi
+done
+[ $STATUS -ne 0 ] && echo 'xml file(s) were updated, please repeat the commit' >&2 
+exit $STATUS

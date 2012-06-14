@@ -1,0 +1,6 @@
+The purpose of these utilities is to maintain a text version of iff files to help with version control systems.
+
+bin/iff2xml.pl - converts iff files to xml (iff2xml.pl -h for usage)
+bin/xml2iff.pl - converts xml files to iff (xml2iff.pl -h for usage)
+bin/pre-commit - git hook that converts any new iff file to xml
+bin/post-checkout - git hook that converts all xml files back to iff
