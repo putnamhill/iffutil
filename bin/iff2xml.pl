@@ -113,14 +113,14 @@ EOT
 			print OUT "\t\t<readable />\n" if defined $ascii;
 		} else {
 			print OUT "\t\t<data>\n$hexdata\t\t</data>\n"; # write the ascii hex data element
-			if (defined $ascii) {                        # print readable ascii if using the -r option
+			if (defined $ascii) {                          # print readable ascii if using the -r option
 				$hexdata = $buf;
-				$hexdata =~ s/[^[:print:]]|[&'"<>]/./g;  # replace non printable characters and xml special characters with periods
-				if ($columns) {                          # positive number so wrap to it
+				$hexdata =~ s/[^[:print:]]|[&'"<>]/./g;    # replace non printable characters and xml special characters with periods
+				if ($columns) {                            # positive number so wrap to it
 					$hexdata =~ s/(.{1,$ascii_columns})/\t\t\t$1\n/g;
-				} else {                                 # otherwise just append a newline
+				} else {                                   # otherwise just append a newline
 					$hexdata .= "\n";
-				}                                        # write the human readable version of the data
+				}                                          # write the human readable version of the data
 				print OUT "\t\t<readable>\n$hexdata\t\t</readable>\n";
 			}
 		}
