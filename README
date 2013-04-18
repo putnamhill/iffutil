@@ -9,4 +9,4 @@ To test the utilities compare the converted/reconverted output to the original f
 iff2xml.pl test.dir | xml2iff.pl -o - | diff -s - test.dir
 Files - and test.dir are identical
 
-If the files - and test.dir are NOT identicle, then there is a problem.
+If the files - and test.dir are NOT identical, then there is a problem.
