@@ -5,7 +5,7 @@ The purpose of these utilities is to maintain a serialized text version of iff f
     bin/pre-commit  - git hook that converts any new iff file to xml
     bin/post-checkout - git hook that converts all xml files back to iff
 
-* xml2iff.pl requires XML::Twig (http://search.cpan.org/perldoc?XML::Twig)
+\* xml2iff.pl requires XML::Twig (http://search.cpan.org/perldoc?XML::Twig)
 If xml2iff.pl prints "Can't locate XML/Twig.pm in @INC (@INC contains:..." then you'll need the XML::Twig module.
 
 To test the utilities compare the converted/reconverted output to the original file:
