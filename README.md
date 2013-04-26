@@ -1,4 +1,4 @@
-The purpose of these utilities is to maintain a serialized text version of iff files to help with version control systems.
+The purpose of these utilities is to maintain a serialized text version of iff files as xml to help with version control systems.
 
     bin/iff2xml.pl  - converts iff files to xml (iff2xml.pl -h for usage)
     bin/xml2iff.pl* - converts xml files to iff (xml2iff.pl -h for usage)
